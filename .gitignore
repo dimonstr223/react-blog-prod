@@ -1,5 +1,4 @@
-.idea/
-.vscode/
-build/
-config/
-node_modules/
+.idea
+.vscode
+/build
+node_modules
