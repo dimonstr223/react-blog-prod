@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // куда производится сборка. В данном случае неважно, т.к собирает webpack
+    "outDir": "./dist/",
+    // подсвечивает все места, где не указан тип, где неявный any
+    "noImplicitAny": true,
+    "module": "ESNext",
+    // в какую спецификацию компилируем: для поддержки большинства браузеров
+    "target": "es5",
+    "jsx": "react-jsx",
+    // компилятор будет обрабатывать не только ts файлы, но и js
+    "allowJs": true,
+    "moduleResolution": "Node",
+    // для абсолютных путей
+    "baseUrl": ".",
+    // вкратце, это для модульных импортов в webpack.config.ts
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
