@@ -1,8 +1,6 @@
 import { lazy } from "react"
 
-const AboutPageLazy = lazy(() => new Promise(res => {
+export const AboutPageLazy = lazy(() => new Promise(res => {
   // @ts-ignore
   setTimeout(() => res(import('./AboutPage')), 1000)
 }))
-
-export default AboutPageLazy

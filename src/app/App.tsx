@@ -1,9 +1,9 @@
 import React, {Suspense, useContext, useState} from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import AboutPageLazy from "./pages/AboutPage/AboutPage.lazy"
-import MainPageLazy from "./pages/MainPage/MainPage.lazy"
-import useTheme from "./theme/useTheme";
-import classNames from "./helpers/classNames/classNames";
+import classNames from "helpers/classNames/classNames";
+import {useTheme} from "app/providers/ThemeProvider";
+import {AboutPage} from "pages/AboutPage";
+import {MainPage} from "pages/MainPage";
 
 import './styles/index.scss'
 
@@ -17,8 +17,8 @@ const App = () => {
       <Link to='/about'>About</Link>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path='/' element={<MainPageLazy/>} />
-          <Route path='/about' element={<AboutPageLazy/>} />
+          <Route path='/' element={<MainPage/>} />
+          <Route path='/about' element={<AboutPage/>} />
         </Routes>
       </Suspense>
     </div>

@@ -13,6 +13,9 @@
     "moduleResolution": "Node",
     // для абсолютных путей
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"],
+    },
     // вкратце, это для модульных импортов в webpack.config.ts
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
