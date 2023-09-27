@@ -4,7 +4,7 @@ const classNames = (cls: string, additional: string[] = [], mods: ModsType = {})
   return [
     cls,
     ...additional.filter(Boolean),
-    ...Object.values(mods).filter(value => Boolean(value)).map(cls => cls)
+    ...Object.entries(mods).filter(([_, value]) => Boolean(value)).map(([cls]) => cls)
   ].join(' ')
 }
 
