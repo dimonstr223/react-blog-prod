@@ -4,6 +4,7 @@
   width: var(--sidebar-width);
   background-color: var(--invert-bg-color);
   transition: width .3s;
+  overflow: hidden;
 }
 
 .collapsed {
@@ -15,5 +16,6 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
+  gap: 20px;
   width: 100%;
 }
