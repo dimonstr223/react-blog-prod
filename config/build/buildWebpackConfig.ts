@@ -1,9 +1,9 @@
-import { BuildOptions } from "./types/config"
-import { buildPlugins } from "./buildPlugins"
-import { Configuration } from "webpack"
-import { buildLoaders } from "./buildLoaders"
-import { buildResolvers } from "./buildResolvers"
-import { buildDevServ } from "./buildDevServ"
+import { BuildOptions } from './types/config'
+import { buildPlugins } from './buildPlugins'
+import { Configuration } from 'webpack'
+import { buildLoaders } from './buildLoaders'
+import { buildResolvers } from './buildResolvers'
+import { buildDevServ } from './buildDevServ'
 
 export const buildWebpackConfig = (options: BuildOptions): Configuration => {
   const { mode, paths, isDev } = options

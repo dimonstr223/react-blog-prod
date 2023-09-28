@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import classNames from "shared/lib/classNames/classNames";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
+import React, { FC } from 'react'
+import classNames from 'shared/lib/classNames/classNames'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 
 import cls from './Navbar.module.scss'
 
@@ -16,5 +16,5 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
         <AppLink theme={AppLinkTheme.SECONDARY} to='/about'>About</AppLink>
       </div>
     </div>
-  );
-};
+  )
+}

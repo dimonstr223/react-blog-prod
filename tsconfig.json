@@ -19,6 +19,7 @@
     // вкратце, это для модульных импортов в webpack.config.ts
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
   },
   "ts-node": {
     "compilerOptions": {
