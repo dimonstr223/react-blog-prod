@@ -10,7 +10,7 @@
     "jsx": "react-jsx",
     // компилятор будет обрабатывать не только ts файлы, но и js
     "allowJs": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     // для абсолютных путей
     "baseUrl": ".",
     "paths": {
@@ -19,7 +19,7 @@
     // вкратце, это для модульных импортов в webpack.config.ts
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true
+//    "strictNullChecks": true
   },
   "ts-node": {
     "compilerOptions": {
