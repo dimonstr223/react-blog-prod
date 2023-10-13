@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import classNames from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 
 import { Theme, useTheme } from 'app/providers/ThemeProvider'
 
