@@ -13,11 +13,13 @@ module.exports = {
   'overrides': [
     {
       'env': {
-        'node': true
+        'node': true,
       },
       'files': [
-        '.eslintrc.{js,cjs}'
+        '.eslintrc.{js,cjs}',
+        '**/src/**/*.test.{ts,tsx}'
       ],
+      rules: { 'i18next/no-literal-string': 'off' },
       'parserOptions': {
         'sourceType': 'script'
       }
@@ -42,7 +44,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     'react/no-deprecated': 'off',
-    'i18next/no-literal-string': ['warn', { markupOnly: true }],
+    'i18next/no-literal-string': ['warn', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     'object-curly-spacing': ['error', 'always']
-  }
+  },
+  'globals': { __IS_DEV__: true }
 }
