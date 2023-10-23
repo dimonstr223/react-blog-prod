@@ -38,7 +38,8 @@ module.exports = {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to']
     }],
-    'object-curly-spacing': ['error', 'always']
+    'object-curly-spacing': ['error', 'always'],
+    'no-undef': ['warn']
   },
   'globals': {
     __IS_DEV__: true
