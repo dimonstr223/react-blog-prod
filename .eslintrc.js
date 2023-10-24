@@ -25,7 +25,7 @@ module.exports = {
   'plugins': ['react', '@typescript-eslint', 'i18next'],
   'rules': {
     'indent': [2, 2],
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['warn', 'windows'],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
     '@typescript-eslint/no-unused-vars': ['warn', {
