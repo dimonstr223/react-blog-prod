@@ -16,12 +16,13 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): WebpackPluginInsta
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     }),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
   ]
 
   if (isDev) {
-    plugins.push(new ReactRefreshWebpackPlugin())
-    plugins.push(new HotModuleReplacementPlugin())
+    [ new ReactRefreshWebpackPlugin(),
+      new HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin({ openAnalyzer: false }),
+    ].forEach(plugin => plugins.push(plugin))
   }
 
   return plugins
