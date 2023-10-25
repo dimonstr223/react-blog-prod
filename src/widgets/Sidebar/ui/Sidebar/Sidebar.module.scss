@@ -4,11 +4,23 @@
   width: var(--sidebar-width);
   background-color: var(--invert-bg-color);
   transition: width 0.3s;
-  overflow: hidden;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0 0 30px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+      fill: var(--invert-secondary-color);
+    }
+  }
 }
 
 .switchers {
@@ -18,4 +30,24 @@
   justify-content: center;
   gap: 20px;
   width: 100%;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+  }
+
+  .link {
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+.collapseBtn {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
 }
