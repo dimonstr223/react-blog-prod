@@ -1,11 +1,11 @@
 module.exports = {
-  'env': {
+  env: {
     'browser': true,
     'es2021': true,
     'jest': true
   },
-  'extends': ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:i18next/recommended'],
-  'overrides': [{
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:i18next/recommended'],
+  overrides: [{
     'env': {
       'node': true
     },
@@ -17,13 +17,18 @@ module.exports = {
       'sourceType': 'script'
     }
   }],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
     'ecmaVersion': 'latest',
     'sourceType': 'module'
   },
-  'plugins': ['react', '@typescript-eslint', 'i18next'],
-  'rules': {
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks'
+  ],
+  rules: {
     'indent': [2, 2],
     'linebreak-style': ['warn', 'windows'],
     'quotes': ['error', 'single'],
@@ -39,9 +44,11 @@ module.exports = {
       ignoreAttribute: ['data-testid', 'to']
     }],
     'object-curly-spacing': ['error', 'always'],
-    'no-undef': ['warn']
+    'no-undef': ['warn'],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error' // Checks effect dependencies
   },
-  'globals': {
+  globals: {
     __IS_DEV__: true
   }
 }
