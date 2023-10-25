@@ -10,6 +10,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 
 import MainIcon from 'shared/assets/icons/main.svg'
 import AboutIcon from 'shared/assets/icons/about.svg'
+
 import cls from './Sidebar.module.scss'
 
 interface SidebarProps {
