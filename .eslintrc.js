@@ -46,7 +46,8 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'no-undef': ['warn'],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    'react-hooks/exhaustive-deps': 'error' // Checks effect dependencies
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+    'react/display-name': 'warn'
   },
   globals: {
     __IS_DEV__: true

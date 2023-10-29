@@ -92,3 +92,10 @@ SquareXL.args = {
   theme: ButtonTheme.BACKGROUND_INVERTED,
   size: ButtonSize.XL
 }
+
+export const Disabled = Template.bind({})
+Outline.args = {
+  children: 'Text',
+  theme: ButtonTheme.OUTLINE,
+  disabled: true
+}
