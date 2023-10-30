@@ -18,12 +18,11 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ className }) => {
   const { t } = useTranslation()
   const [isAuthModal, setIsAuthModal] = useState(false)
-  const dispatch = useDispatch()
   const authData = useSelector(getUserAuthData)
+  const dispatch = useDispatch()
 
   const onShowModal = useCallback(() => setIsAuthModal(true), [])
   const onCloseModal = useCallback(() => setIsAuthModal(false), [])
-
   const onLogout = useCallback(() => dispatch(userActions.logout()), [dispatch])
 
   if (authData) {

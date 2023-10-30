@@ -8,9 +8,10 @@ import { Input } from 'shared/ui/Input/Input'
 import { loginActions } from '../../model/slice/loginSlice'
 import { getLoginState } from '../../model/selectors/getLoginState'
 
-import cls from './LoginForm.module.scss'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
+
+import cls from './LoginForm.module.scss'
 
 interface LoginFormProps {
   className?: string
@@ -39,7 +40,7 @@ const LoginFormInner: FC<LoginFormProps> = ({ className }) => {
   return (
     <div className={classNames(cls.LoginForm, [className])}>
       <Text title={t('Авторизация')} />
-      {error && <Text text={error} theme={TextTheme.ERROR} />}
+      {error && <Text text={t('Неверный логин или пароль')} theme={TextTheme.ERROR} />}
 
       <Input
         type="text"
@@ -47,7 +48,7 @@ const LoginFormInner: FC<LoginFormProps> = ({ className }) => {
         onChange={onChangeUsername}
         autofocus
       />
-      <Input 
+      <Input
         type="text"
         onChange={onChangePassword}
         placeholder={t('Пароль')}

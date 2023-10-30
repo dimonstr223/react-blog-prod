@@ -94,7 +94,7 @@ SquareXL.args = {
 }
 
 export const Disabled = Template.bind({})
-Outline.args = {
+Disabled.args = {
   children: 'Text',
   theme: ButtonTheme.OUTLINE,
   disabled: true
