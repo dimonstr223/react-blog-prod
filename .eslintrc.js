@@ -6,9 +6,7 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:i18next/recommended'],
   overrides: [{
-    'env': {
-      'node': true
-    },
+    'env': { 'node': true },
     'files': ['.eslintrc.{js,cjs}', '**/src/**/*.test.{ts,tsx}'],
     rules: {
       'i18next/no-literal-string': 'off'
@@ -47,7 +45,8 @@ module.exports = {
     'no-undef': ['warn'],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
-    'react/display-name': 'warn',
+    'react/display-name': 'off',
+    'react/prop-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
   },
   globals: {

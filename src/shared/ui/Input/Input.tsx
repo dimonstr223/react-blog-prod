@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, HTMLInputTypeAttribute, InputHTMLAttributes, memo, useEffect, useRef, useState } from 'react'
+import { ChangeEvent, FC, HTMLInputTypeAttribute, InputHTMLAttributes, memo, useEffect, useRef } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import cls from './Input.module.scss'
@@ -14,7 +14,7 @@ interface InputProps extends HTMLInputProps {
   autofocus?: boolean
 }
 
-const InputInner: FC<InputProps> = (props) => {
+export const Input: FC<InputProps> = memo((props) => {
   const {
     value,
     onChange,
@@ -47,6 +47,4 @@ const InputInner: FC<InputProps> = (props) => {
       />
     </label>
   )
-}
-
-export const Input = memo(InputInner)
+})

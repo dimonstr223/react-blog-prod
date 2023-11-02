@@ -1,15 +1,12 @@
-import React, { FC, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import React, { FC, memo, useState } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-
-import MainIcon from 'shared/assets/icons/main.svg'
-import AboutIcon from 'shared/assets/icons/about.svg'
+import { SidebarItemsList } from 'widgets/Sidebar/module/items'
+import { SidebarItem } from 'widgets/Sidebar/ui/SidebarItem/SidebarItem'
 
 import cls from './Sidebar.module.scss'
 
@@ -17,8 +14,7 @@ interface SidebarProps {
   className?: string
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
-  const { t } = useTranslation()
+export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
   const [collapsed, setCollapsed] = useState(false)
   const onToggle = () => { setCollapsed(prev => !prev) }
 
@@ -28,14 +24,9 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       className={classNames(cls.Sidebar, [className], { [cls.collapsed]: collapsed })}
     >
       <div className={cls.links}>
-        <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to='/'>
-          <MainIcon className={cls.icon} />
-          <span className={cls.link}>{t('Главная')}</span>
-        </AppLink>
-        <AppLink className={cls.item} theme={AppLinkTheme.SECONDARY} to='/about'>
-          <AboutIcon className={cls.icon} />
-          <span className={cls.link}>{t('О сайте')}</span>
-        </AppLink>
+        {SidebarItemsList.map(item => (
+          <SidebarItem key={item.path} item={item} collapsed={collapsed} />
+        ))}
       </div>
       <Button
         data-testid='sidebar-toggle'
@@ -53,4 +44,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       </div>
     </div>
   )
-}
+})
