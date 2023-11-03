@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, FC, memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, ModsType } from 'shared/lib/classNames/classNames'
 
 import cls from './Button.module.scss'
 
@@ -26,10 +26,18 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = memo((props) => {
-  const { className, children, theme, square, size, disabled, ...otherProps } = props
+  const {
+    className,
+    children,
+    theme = ButtonTheme.OUTLINE,
+    square,
+    size = ButtonSize.M,
+    disabled,
+    ...otherProps
+  } = props
 
   const additional = [className, cls[theme], cls[size]]
-  const mods = { [cls.square]: square, [cls.disabled]: disabled }
+  const mods: ModsType = { [cls.square]: square, [cls.disabled]: disabled }
 
   return (
     <button

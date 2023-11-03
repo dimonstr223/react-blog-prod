@@ -42,7 +42,8 @@ module.exports = {
       ignoreAttribute: ['data-testid', 'to']
     }],
     'object-curly-spacing': ['error', 'always'],
-    'no-undef': ['warn'],
+    'no-undef': 'off',
+    'no-param-reassign': 'off',
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'react/display-name': 'off',
@@ -50,6 +51,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn'
   },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   }
 }

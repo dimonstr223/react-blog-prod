@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export const buildPlugins = ({ paths, isDev }: BuildOptions): WebpackPluginInstance[] => {
+export const buildPlugins = ({ paths, isDev, apiUrl }: BuildOptions): WebpackPluginInstance[] => {
   const plugins = [
     new HtmlWebpackPlugin({ template: paths.html }),
     new ProgressPlugin(),
@@ -14,7 +14,8 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): WebpackPluginInsta
       chunkFilename: 'css/[name].[contenthash:8].css'
     }),
     new DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
+      __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiUrl)
     }),
   ]
 

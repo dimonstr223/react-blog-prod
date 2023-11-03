@@ -8,8 +8,6 @@ export type ReducersList = {
   [name in StateSchemaKey]?: Reducer
 }
 
-export type ReducersListEntry = [StateSchemaKey, Reducer]
-
 interface DynamicModuleLoaderProps {
   reducers: ReducersList
   unmountRemove?: boolean
@@ -22,14 +20,14 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
 
   // Асинхронно добавляем редюсер для асинхронного комп-та LoginForm
   useEffect(() => {
-    Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
-      reducerManager.add(name, reducer)
+    Object.entries(reducers).forEach(([name, reducer]) => {
+      reducerManager.add(name as StateSchemaKey, reducer)
       dispatch({ type: `@INIT ${name} reducer` })
     })
     return () => {
       if (unmountRemove) {
-        Object.entries(reducers).forEach(([name, _]: ReducersListEntry) => {
-          reducerManager.remove(name)
+        Object.entries(reducers).forEach(([name, _]) => {
+          reducerManager.remove(name as StateSchemaKey)
           dispatch({ type: `@DESTROY ${name} reducer` })
         })
       }
