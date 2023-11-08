@@ -39,7 +39,7 @@ module.exports = {
     'react/no-deprecated': 'off',
     'i18next/no-literal-string': ['warn', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to']
+      ignoreAttribute: ['data-testid', 'to', 'alt']
     }],
     'object-curly-spacing': ['error', 'always'],
     'no-undef': 'off',
