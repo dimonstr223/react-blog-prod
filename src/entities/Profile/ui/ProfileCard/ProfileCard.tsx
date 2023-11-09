@@ -18,9 +18,10 @@ import { Country, CountrySelect } from 'entities/Country'
 
 interface ProfileCardProps {
   className?: string
-  form?: Profile
+  data?: Profile
   isLoading?: boolean
   error?: string
+  readonly?: boolean
   onChangeFirstname?: (value?: string) => void
   onChangeLastname?: (value?: string) => void
   onChangeAge?: (value?: string) => void
@@ -34,9 +35,10 @@ interface ProfileCardProps {
 export const ProfileCard: FC<ProfileCardProps> = memo((props) => {
   const {
     className,
-    form,
+    data,
     isLoading,
     error,
+    readonly,
     onChangeFirstname,
     onChangeLastname,
     onChangeAge,
@@ -47,8 +49,6 @@ export const ProfileCard: FC<ProfileCardProps> = memo((props) => {
     onChangeCountry
   } = props
   const { t } = useTranslation('profile')
-  const readonly = useSelector(getProfileReadonly)
-
 
   if (isLoading) {
     return (
@@ -74,29 +74,29 @@ export const ProfileCard: FC<ProfileCardProps> = memo((props) => {
   return (
     <div className={classNames(cls.ProfileCard, [className], { [cls.editing]: !readonly })}>
       <div className={cls.data}>
-        {form?.avatar && (
+        {data?.avatar && (
           <div className={cls.avatarWrapper}>
-            <Avatar src={form.avatar} />
+            <Avatar src={data.avatar} />
           </div>
         )}
 
         <Input
           className={cls.input}
-          value={form?.first}
+          value={data?.first}
           placeholder={t('Имя')}
           readonly={readonly}
           onChange={onChangeFirstname}
         />
         <Input
           className={cls.input}
-          value={form?.lastname}
+          value={data?.lastname}
           placeholder={t('Фамилия')}
           readonly={readonly}
           onChange={onChangeLastname}
         />
         <Input
           className={cls.input}
-          value={form?.age}
+          value={data?.age}
           placeholder={t('Возраст')}
           readonly={readonly}
           onChange={onChangeAge}
@@ -104,32 +104,32 @@ export const ProfileCard: FC<ProfileCardProps> = memo((props) => {
         />
         <Input
           className={cls.input}
-          value={form?.city}
+          value={data?.city}
           placeholder={t('Город')}
           readonly={readonly}
           onChange={onChangeCity}
         />
         <Input
           className={cls.input}
-          value={form?.username}
+          value={data?.username}
           placeholder={t('Имя пользователя')}
           readonly={readonly}
           onChange={onChangeUsername}
         />
         <Input
           className={cls.input}
-          value={form?.avatar}
+          value={data?.avatar}
           placeholder={t('Аватар')}
           readonly={readonly}
           onChange={onChangeAvatar}
         />
         <CurrencySelect
-          value={form?.currency}
+          value={data?.currency}
           onChange={onChangeCurrency}
           readonly={readonly}
         />
         <CountrySelect
-          value={form?.country}
+          value={data?.country}
           onChange={onChangeCountry}
           readonly={readonly}
         />
