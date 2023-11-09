@@ -48,6 +48,10 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
     [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка'),
   }
 
+  useEffect(() => {
+    if (__PROJECT__ !== 'storybook') dispatch(fetchProfileData())
+  }, [dispatch])
+
   const onChangeFirstname = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({ first: value || '' }))
   }, [dispatch])
@@ -78,10 +82,6 @@ const ProfilePage: FC<ProfilePageProps> = ({ className }) => {
 
   const onChangeCountry = useCallback((country?: Country) => {
     dispatch(profileActions.updateProfile({ country }))
-  }, [dispatch])
-
-  useEffect(() => {
-    dispatch(fetchProfileData())
   }, [dispatch])
 
   return (

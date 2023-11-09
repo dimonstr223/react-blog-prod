@@ -12,6 +12,8 @@ export const fetchProfileData = createAsyncThunk<
     try {
       const { data } = await extra.api.get<Profile>('/profile')
 
+      if (!data) throw new Error()
+
       return data
     } catch(error) {
       console.log(error)
