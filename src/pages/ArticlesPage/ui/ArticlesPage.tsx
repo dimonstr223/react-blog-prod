@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 
@@ -18,4 +18,4 @@ const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
   )
 }
 
-export default ArticlesPage
+export default memo(ArticlesPage)

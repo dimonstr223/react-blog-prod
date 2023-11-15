@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
@@ -18,8 +17,6 @@ describe('getProfileForm.test', () => {
 
     const state: DeepPartial<StateSchema> = {
       profile: {
-        isLoading: false,
-        readonly: true,
         form: formData
       }
     }

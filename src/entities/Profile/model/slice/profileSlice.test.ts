@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { profileActions, profileReducer, ProfileSchema, updateProfileData } from 'entities/Profile'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'

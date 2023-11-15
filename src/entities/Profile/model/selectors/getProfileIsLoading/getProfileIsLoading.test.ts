@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getProfileIsLoading } from 'entities/Profile'
 
@@ -7,7 +6,6 @@ describe('getProfileIsLoading.test', () => {
     const state: DeepPartial<StateSchema> = {
       profile: {
         isLoading: true,
-        readonly: true
       }
     }
     expect(getProfileIsLoading(state as StateSchema)).toBe(true)

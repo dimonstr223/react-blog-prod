@@ -1,6 +1,5 @@
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getProfileData } from 'entities/Profile'
 
@@ -13,15 +12,10 @@ describe('getProfileData.test', () => {
       currency: Currency.USD,
       country: Country.China,
       city: 'Shanghai',
-      username: 'admin',
     }
 
     const state: DeepPartial<StateSchema> = {
-      profile: {
-        data,
-        isLoading: false,
-        readonly: true
-      }
+      profile: { data }
     }
     expect(getProfileData(state as StateSchema)).toEqual(data)
   })

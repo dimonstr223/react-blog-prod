@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { getProfileValidateErrors } from 'entities/Profile'
@@ -13,8 +12,6 @@ describe('getProfileValidateErrors.test', () => {
     const state: DeepPartial<StateSchema> = {
       profile: {
         validateErrors: errors,
-        isLoading: false,
-        readonly: true
       }
     }
     expect(getProfileValidateErrors(state as StateSchema)).toEqual(errors)

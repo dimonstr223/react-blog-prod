@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getProfileError } from 'entities/Profile'
 
@@ -7,8 +6,6 @@ describe('getProfileError.test', () => {
     const state: DeepPartial<StateSchema> = {
       profile: {
         error: 'error message',
-        readonly: true,
-        isLoading: false
       }
     }
     expect(getProfileError(state as StateSchema)).toEqual('error message')

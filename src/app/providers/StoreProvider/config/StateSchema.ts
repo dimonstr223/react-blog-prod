@@ -7,6 +7,8 @@ import { ProfileSchema } from 'entities/Profile'
 import { AxiosInstance } from 'axios'
 import { To } from 'history'
 import { NavigateOptions } from 'react-router'
+import { ArticleDetailsSchema } from 'entities/Article'
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -15,6 +17,8 @@ export interface StateSchema {
   // Асинхронные редюсеры
   loginForm?: LoginSchema
   profile?: ProfileSchema
+  articleDetails?: ArticleDetailsSchema
+  articleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
@@ -40,3 +44,4 @@ export interface ThunkConfig<T> {
   extra: ThunkExtraArg
   state: StateSchema
 }
+

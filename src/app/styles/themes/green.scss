@@ -1,9 +1,16 @@
 .app_green_theme {
-  --bg-color: #f4fbf9;
+  --bg-color: #e4ebe9;
   --invert-bg-color: #319f84;
   --primary-color: #1d6356;
   --secondary-color: #319f84;
   --invert-primary-color: #fff;
   --invert-secondary-color: #f4fbf9;
   --accent-color: #288136;
+
+  // skeleton
+  --skeleton-color: #fff;
+  --skeleton-shadow: rgba(0 0 0 / 20%);
+
+  // code
+  --code-gb: #a5c9be;
 }
