@@ -22,7 +22,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
 
       dispatch(userActions.setAuthData(data))
 
-      extra.navigate?.('/profile')
+      extra.navigate?.(`/profile/${data.id}`)
 
       return data
     } catch (error) {
