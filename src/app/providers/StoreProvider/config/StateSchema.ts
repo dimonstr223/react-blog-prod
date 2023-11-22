@@ -9,6 +9,7 @@ import { To } from 'history'
 import { NavigateOptions } from 'react-router'
 import { ArticleDetailsSchema } from 'entities/Article'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { AddCommentSchema } from 'features/AddComment'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -19,6 +20,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
+  addComment?: AddCommentSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

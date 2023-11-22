@@ -1,4 +1,4 @@
-import { FC, memo } from 'react'
+import { FC, memo, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
@@ -15,7 +15,9 @@ import { getArticleCommnetsIsLoading } from '../model/selectors/comments'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import {
   fetchCommentsByArticleId
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+} from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import { AddCommentForm } from 'features/AddComment'
+import { addCommentToArticle } from '../model/services/addCommentToArticle/addCommentToArticle'
 
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer
@@ -37,6 +39,10 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
     dispatch(fetchCommentsByArticleId(id))
   })
 
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentToArticle(text))
+  }, [dispatch])
+
   if (!id) {
     return (
       <div className={classNames(cls.ArticleDetailsPage, [className])}>
@@ -50,6 +56,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
       <div className={classNames(cls.ArticleDetailsPage, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('Комментарии')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoadingComments} comments={comments} />
       </div>
     </DynamicModuleLoader>

@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,48 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "my first comment",
+      "id": "asVOusc"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123123",
+      "id": "jo8DDL4"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "comment with auto updating",
+      "id": "1LSfcF-"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "zsvcvasdad",
+      "id": "161dFot"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdasd",
+      "id": "LYvT1Jg"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdfasdf",
+      "id": "NhjEVg2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "HELLO WORLD!!",
+      "id": "38BnPb6"
     }
   ],
   "users": [
@@ -118,14 +162,28 @@
       "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg"
     }
   ],
-  "profile": {
-    "first": "Димонстр",
-    "lastname": "ДваДваТри",
-    "age": 22,
-    "currency": "USD",
-    "country": "China",
-    "city": "Shanghai",
-    "username": "admin1",
-    "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Димонстр223",
+      "lastname": "ДваДваТри",
+      "age": 22,
+      "currency": "USD",
+      "country": "China",
+      "city": "Shanghai",
+      "username": "admin1",
+      "avatar": "https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "2",
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ulbi tv",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ]
 }
