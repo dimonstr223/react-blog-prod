@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
 
+import { Page } from 'shared/ui/Page/Page'
 import { ArticleDetails } from 'entities/Article'
 import { Text } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
@@ -63,7 +64,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} unmountRemove >
-      <div className={classNames(cls.ArticleDetailsPage, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, [className])}>
         <Button onClick={onBackToList}>
           {t('Назад к списку статей')}
         </Button>
@@ -71,7 +72,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
         <Text className={cls.commentTitle} title={t('Комментарии')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoadingComments} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
