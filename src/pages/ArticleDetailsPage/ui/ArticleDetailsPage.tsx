@@ -1,5 +1,5 @@
 import { FC, memo, useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
@@ -23,6 +23,7 @@ import { Button } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 import cls from './ArticleDetailsPage.module.scss'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer
@@ -35,7 +36,7 @@ interface ArticleDetailsPageProps {
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = ({ className }) => {
   const { t } = useTranslation('article')
   const { id } = useParams<{ id: string }>()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
   const comments = useSelector(getArticleComments.selectAll)

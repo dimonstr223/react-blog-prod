@@ -4,13 +4,14 @@ import { AppRouter } from 'app/providers/router'
 
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { getUserInited, userActions } from 'entities/User'
 import { useTheme } from 'app/providers/ThemeProvider'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 const App = () => {
   const { theme } = useTheme()
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const inited = useSelector(getUserInited)
 
   useEffect(() => {

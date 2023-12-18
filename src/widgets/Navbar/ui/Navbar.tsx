@@ -1,5 +1,5 @@
 import React, { FC, memo, useCallback, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 
@@ -10,6 +10,7 @@ import { LoginModal } from 'features/AuthByUsername/ui/LoginModal/LoginModal'
 import { getUserAuthData, userActions } from 'entities/User'
 
 import cls from './Navbar.module.scss'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 interface NavbarProps {
   className?: string
@@ -19,7 +20,7 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
   const { t } = useTranslation()
   const [isAuthModal, setIsAuthModal] = useState(false)
   const authData = useSelector(getUserAuthData)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const onShowModal = useCallback(() => setIsAuthModal(true), [])
   const onCloseModal = useCallback(() => setIsAuthModal(false), [])
