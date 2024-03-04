@@ -14,11 +14,11 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news",
+      "title": "Javascript news СВЕЖАЯ",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "26.04.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -88,8 +88,8 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
-      "views": 1022,
+      "img": "https://static.scientificamerican.com/sciam/cache/file/DE5D6023-4C04-40D8-90302A38800DC47A_source.jpg?w=1200",
+      "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -110,11 +110,11 @@
     },
     {
       "id": "3",
-      "title": "Kotlin news",
+      "title": "Kotlin news 2019",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 94002,
+      "createdAt": "26.02.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -134,11 +134,11 @@
     },
     {
       "id": "4",
-      "title": "Python news",
+      "title": "Scala news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "data:image/png;base64,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",
+      "views": 10222,
+      "createdAt": "24.01.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -158,11 +158,11 @@
     },
     {
       "id": "5",
-      "title": "Kotlin news",
+      "title": "Golang news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://miro.medium.com/v2/resize:fit:1400/1*DnnkReGamr7ps_2HlGT_FQ.png",
+      "views": 10222,
+      "createdAt": "26.02.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -182,9 +182,9 @@
     },
     {
       "id": "6",
-      "title": "Python news",
+      "title": "Java news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
+      "img": "https://andreyex.ru/wp-content/uploads/2018/05/Kak-ustanovit-Java-s-apt-na-Ubuntu-18.04.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -206,11 +206,11 @@
     },
     {
       "id": "7",
-      "title": "Kotlin news",
+      "title": "Ruby news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--oqV3akcU--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/pgnw91fs7tpxn0wyeqh2.jpg",
+      "views": 100,
+      "createdAt": "21.02.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -230,10 +230,10 @@
     },
     {
       "id": "8",
-      "title": "Python news",
+      "title": "TypeScript news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
-      "views": 1022,
+      "img": "https://miro.medium.com/max/1400/1*aTCN2ctKNoZupUCMP0hQuw.png",
+      "views": 102222,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -280,7 +280,7 @@
       "id": "10",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
+      "img": "https://static.scientificamerican.com/sciam/cache/file/DE5D6023-4C04-40D8-90302A38800DC47A_source.jpg?w=1200",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -328,7 +328,7 @@
       "id": "12",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
+      "img": "https://static.scientificamerican.com/sciam/cache/file/DE5D6023-4C04-40D8-90302A38800DC47A_source.jpg?w=1200",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -376,7 +376,7 @@
       "id": "14",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
+      "img": "https://static.scientificamerican.com/sciam/cache/file/DE5D6023-4C04-40D8-90302A38800DC47A_source.jpg?w=1200",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -424,7 +424,7 @@
       "id": "16",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://images.datacamp.com/image/upload/f_auto,q_auto:best/v1603718736/Why_Your_Company_Needs_Python_for_Business_Analytics_xzzles.png",
+      "img": "https://static.scientificamerican.com/sciam/cache/file/DE5D6023-4C04-40D8-90302A38800DC47A_source.jpg?w=1200",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -454,6 +454,54 @@
       "userId": "1",
       "type": [
         "IT"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
+            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Экономическая статья - ИНФЛЯЦИЯ!",
+      "subtitle": "Экономика",
+      "img": "https://www.mirea.ru/upload/iblock/7cf/vvp_rf2018_1.jpg",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "ECONOMICS"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
+            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
+            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Научная статья - Биология",
+      "subtitle": "БиологиЯ",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
       ],
       "blocks": [
         {
