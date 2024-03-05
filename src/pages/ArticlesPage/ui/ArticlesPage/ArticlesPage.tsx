@@ -14,10 +14,11 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { Page } from 'shared/ui/Page/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
-
-import cls from './ArticlesPage.module.scss'
+import { useSearchParams } from 'react-router-dom'
 import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlesPage/initArticlesPage'
 import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters'
+
+import cls from './ArticlesPage.module.scss'
 
 interface ArticlesPageProps {
   className?: string
@@ -30,13 +31,14 @@ const reducers = {
 const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
   const { t } = useTranslation('article')
   const dispatch = useAppDispatch()
+  const [searchParams] = useSearchParams()
 
   const articles  = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
   const view      = useSelector(getArticlesPageView)
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage())
+    dispatch(initArticlesPage(searchParams))
   })
 
   const onLoadNextPart = useCallback(() => {

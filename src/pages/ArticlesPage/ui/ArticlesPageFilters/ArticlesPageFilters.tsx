@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { articlesPageActions } from '../../model/slice/articlePageSlice'
 import {
-  getArticlesPageOrder,
+  getArticlesPageOrder, getArticlesPageSearch,
   getArticlesPageSort,
   getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
@@ -17,6 +17,7 @@ import { Card } from 'shared/ui/Card/Card'
 import { Input } from 'shared/ui/Input/Input'
 import { SortOrder } from 'shared/types'
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 
 interface ArticlesPageFiltersProps {
   className?: string
@@ -29,10 +30,13 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
   const view = useSelector(getArticlesPageView)
   const order = useSelector(getArticlesPageOrder)
   const sort = useSelector(getArticlesPageSort)
+  const search = useSelector(getArticlesPageSearch)
 
   const fetchData = useCallback(() => {
     dispatch(fetchArticlesList({ replace: true }))
   }, [dispatch])
+
+  const debouncedFetchData = useDebounce(fetchData, 500)
 
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view))
@@ -53,8 +57,8 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
   const onChangeSearch = useCallback((search: string) => {
     dispatch(articlesPageActions.setSearch(search))
     dispatch(articlesPageActions.setPage(1))
-    fetchData()
-  }, [dispatch, fetchData])
+    debouncedFetchData()
+  }, [dispatch, debouncedFetchData])
 
   return (
     <div className={classNames(cls.ArticlesPageFilters, [className])}>
@@ -65,10 +69,16 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
         />
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticleViewSelector
+          view={view}
+          onViewClick={onChangeView}
+        />
       </div>
       <Card className={cls.search}>
-        <Input placeholder={t('Поиск')} onChange={onChangeSearch} />
+        <Input
+          onChange={onChangeSearch}
+          value={search}
+          placeholder={t('Поиск')} />
       </Card>
     </div>
   )

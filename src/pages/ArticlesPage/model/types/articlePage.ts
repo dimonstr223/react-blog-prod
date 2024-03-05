@@ -10,7 +10,7 @@ export interface ArticlesPageSchema extends EntityState<Article> {
   view: ArticleView
   // pagination
   page: number
-  limit?: number
+  limit: number
   hasMore: boolean
 
   order: SortOrder

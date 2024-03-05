@@ -24,8 +24,9 @@ const initialState = articlesAdapter.getInitialState<ArticlesPageSchema>({
   page: 1,
   hasMore: true,
   _inited: false,
-  order: 'asc',
+  limit: 9,
   sort: ArticleSortField.CREATED,
+  order: 'asc',
   search: '',
 })
 
@@ -69,7 +70,7 @@ const articlesPageSlice = createSlice({
       .addCase(fetchArticlesList.fulfilled, (state, action) => {
         state.isLoading = false
         state.error = undefined
-        state.hasMore = action.payload.length > 0
+        state.hasMore = action.payload.length >= state.limit
 
         if (action.meta.arg.replace) {
           articlesAdapter.setAll(state, action.payload)
