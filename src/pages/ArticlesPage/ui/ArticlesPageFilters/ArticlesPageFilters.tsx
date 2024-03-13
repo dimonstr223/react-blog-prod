@@ -2,13 +2,13 @@ import { FC, useCallback } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 
-import { ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector } from 'entities/Article'
+import { Article, ArticleSortField, ArticleSortSelector, ArticleView, ArticleViewSelector } from 'entities/Article'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { articlesPageActions } from '../../model/slice/articlePageSlice'
 import {
   getArticlesPageOrder, getArticlesPageSearch,
-  getArticlesPageSort,
+  getArticlesPageSort, getArticlesPageType,
   getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 
@@ -16,21 +16,25 @@ import cls from './ArticlesPageFilters.module.scss'
 import { Card } from 'shared/ui/Card/Card'
 import { Input } from 'shared/ui/Input/Input'
 import { SortOrder } from 'shared/types'
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
+import { Tabs } from 'shared/ui/Tabs/Tabs'
+import { ArticleType } from 'entities/Article/model/types/article'
+import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs'
 
 interface ArticlesPageFiltersProps {
   className?: string
 }
 
 export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('article')
   const dispatch = useAppDispatch()
 
   const view = useSelector(getArticlesPageView)
   const order = useSelector(getArticlesPageOrder)
   const sort = useSelector(getArticlesPageSort)
   const search = useSelector(getArticlesPageSearch)
+  const type = useSelector(getArticlesPageType)
 
   const fetchData = useCallback(() => {
     dispatch(fetchArticlesList({ replace: true }))
@@ -53,6 +57,12 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
     dispatch(articlesPageActions.setPage(1))
     fetchData()
   }, [dispatch, fetchData])
+
+  const onChangeType = useCallback((value) => {
+    dispatch(articlesPageActions.setType(value))
+    dispatch(articlesPageActions.setPage(1))
+    fetchData()
+  }, [dispatch])
 
   const onChangeSearch = useCallback((search: string) => {
     dispatch(articlesPageActions.setSearch(search))
@@ -80,6 +90,11 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
           value={search}
           placeholder={t('Поиск')} />
       </Card>
+      <ArticleTypeTabs 
+        className={cls.tabs}
+        value={type}
+        onChangeType={onChangeType}
+      />
     </div>
   )
 }

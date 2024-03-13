@@ -4,7 +4,7 @@ import { Article, ArticleView } from 'entities/Article'
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
 
 export default {
-  title    : 'entities/ArticleListItem',
+  title    : 'entities/Article/ArticleListItem',
   component: ArticleListItem,
   argTypes : {
     backgroundColor: { control: 'color' },
