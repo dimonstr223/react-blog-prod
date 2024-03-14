@@ -17,3 +17,21 @@ body {
 .content-page {
   display: flex;
 }
+
+a {
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;               /* ширина всей полосы прокрутки */
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--cart-bg);        /* цвет зоны отслеживания */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);    /* цвет бегунка */
+  border-radius: 4px;       /* округлось бегунка */
+}
