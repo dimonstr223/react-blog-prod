@@ -11,6 +11,9 @@ import { getUserAuthData, userActions } from 'entities/User'
 
 import cls from './Navbar.module.scss'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface NavbarProps {
   className?: string
@@ -29,6 +32,17 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
   if (authData) {
     return (
       <div className={classNames(cls.Navbar, [className])}>
+        <Text
+          title={'Dimonstr223 Blog'}
+          theme={TextTheme.INVERTED}
+          className={cls.appName}
+        />
+        <AppLink
+          to={RoutePath.article_create}
+          theme={AppLinkTheme.SECONDARY}
+        >
+          {t('Создать статью')}
+        </AppLink>
         <Button
           className={cls.link}
           theme={ButtonTheme.CLEAR_INVERTED}
