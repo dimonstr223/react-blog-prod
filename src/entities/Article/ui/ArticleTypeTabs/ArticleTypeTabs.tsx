@@ -41,10 +41,10 @@ export const ArticleTypeTabs: FC<ArticleTypeTabsProps> = ({ className, value, on
 
   return (
     <Tabs
-        className={classNames('', [className])}
-        tabs={typeTabs}
-        value={value}
-        onTabClick={onTabClick}
-      />
+      className={classNames('', [className])}
+      tabs={typeTabs}
+      value={value}
+      onTabClick={onTabClick}
+    />
   )
 }

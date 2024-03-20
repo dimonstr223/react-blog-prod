@@ -24,16 +24,18 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
-    'react-hooks'
+    'react-hooks',
+    'dimonstr223-plugin'
   ],
   rules: {
     'indent': [2, 2],
     'linebreak-style': ['warn', 'windows'],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
-    '@typescript-eslint/no-unused-vars': ['warn', {
-      'argsIgnorePattern': '^_'
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { 'argsIgnorePattern': '^_' }
+    ],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     'react/no-deprecated': 'off',
@@ -48,7 +50,8 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'react/display-name': 'off',
     'react/prop-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn'
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'dimonstr223-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

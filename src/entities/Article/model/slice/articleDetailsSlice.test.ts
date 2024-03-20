@@ -1,6 +1,6 @@
-import { ArticleDetailsSchema } from 'entities/Article'
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
+import { ArticleDetailsSchema } from '../types/articleDetailsSchema'
+import { articleDetailsReducer } from '../slice/articleDetailsSlice'
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
 
 describe('articleDetailsSlice.test', () => {
   test('fetch article service pending', () => {

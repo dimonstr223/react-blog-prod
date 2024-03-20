@@ -62,7 +62,7 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
     dispatch(articlesPageActions.setType(value))
     dispatch(articlesPageActions.setPage(1))
     fetchData()
-  }, [dispatch])
+  }, [dispatch, fetchData])
 
   const onChangeSearch = useCallback((search: string) => {
     dispatch(articlesPageActions.setSearch(search))
@@ -90,7 +90,7 @@ export const ArticlesPageFilters: FC<ArticlesPageFiltersProps> = ({ className })
           value={search}
           placeholder={t('Поиск')} />
       </Card>
-      <ArticleTypeTabs 
+      <ArticleTypeTabs
         className={cls.tabs}
         value={type}
         onChangeType={onChangeType}

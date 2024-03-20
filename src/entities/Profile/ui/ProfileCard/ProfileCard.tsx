@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
 import { Input } from 'shared/ui/Input/Input'
-import { Profile } from 'entities/Profile'
+import { Profile } from '../../model/types/profile'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 

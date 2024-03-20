@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import { ArticleView } from 'entities/Article'
+import { ArticleView } from '../../model/types/article'
 import { Card } from 'shared/ui/Card/Card'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 

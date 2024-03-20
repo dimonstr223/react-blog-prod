@@ -1,7 +1,10 @@
-import { profileActions, profileReducer, ProfileSchema, updateProfileData } from 'entities/Profile'
+
+import { profileActions, profileReducer } from '../slice/profileSlice'
+import { ProfileSchema } from '../types/profile'
+import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import { ValidateProfileError } from 'entities/Profile/model/types/profile'
+import { ValidateProfileError } from '../types/profile'
 
 const data = {
   first: 'Dimonstr',

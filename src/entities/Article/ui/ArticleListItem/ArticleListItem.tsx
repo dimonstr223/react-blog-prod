@@ -12,7 +12,7 @@ import { Card } from 'shared/ui/Card/Card'
 import { useHover } from 'shared/lib/hooks/useHover/useHover'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { ArticleBlockTextComponent } from 'entities/Article/ui/ArticleBlockTextComponent/ArticleBlockTextComponent'
+import { ArticleBlockTextComponent } from '../ArticleBlockTextComponent/ArticleBlockTextComponent'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 

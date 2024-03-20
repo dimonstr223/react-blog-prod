@@ -1,5 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { fetchProfileData } from 'entities/Profile'
+import { fetchProfileData } from './fetchProfileData'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 

@@ -1,7 +1,7 @@
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import { validateProfileData } from 'entities/Profile/model/services/validateProfileData/validateProfileData'
-import { ValidateProfileError } from 'entities/Profile/model/types/profile'
+import { validateProfileData } from '../validateProfileData/validateProfileData'
+import { ValidateProfileError } from '../../types/profile'
 
 const data = {
   first: 'Dimonstr',

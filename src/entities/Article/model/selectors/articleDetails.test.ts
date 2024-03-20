@@ -3,7 +3,7 @@ import {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsLoading
-} from 'entities/Article/model/selectors/articleDetails'
+} from './/articleDetails'
 
 describe('articleDetails.test', () => {
   test('return articleDetails data', () => {

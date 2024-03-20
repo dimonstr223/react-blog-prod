@@ -24,7 +24,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getArticleRecs } from '../../model/slice/articleDetailsRecsSlice'
 import { articleDetailsPageReducer } from '../../model/slice'
 import { fetchArticlesRecs } from '../../model/services/fetchArticleRecs/fetchArticleRecs'
-import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer

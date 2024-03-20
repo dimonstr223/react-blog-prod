@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import { Comment } from 'entities/Comment'
+import { Comment } from '../../model/types/comment'
 
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Text } from 'shared/ui/Text/Text'
